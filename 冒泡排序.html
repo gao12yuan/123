@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 冒泡排序
+        //    var  arr=[9,3,4,6,7,8];
+        //    for( j=0; j< arr.length-1 ; j++){
+        //        for (i = 0 ; i < arr.length-1-j ; i++ ){
+        //            if( arr[i] > arr[i+1]){
+        //                var temp= arr[i] ;
+        //                arr[i] = arr[i+1];
+        //                arr[i+1] = temp;
+        //            }
+        //        }
+        //    }
+        // console.log(arr);
+
+        // 给一组数字数组，将该数组中的数据排序（按照从小到大的规则）
+        var arr = [6, 9, 7, 3, 2, 0]
+        for (j = 0; j < arr.length - 1; j++) {
+            for (i = 0; i < arr.length - 1 - j; i++) {
+                if (arr[i] > arr[i + 1]) {
+                    var temp = arr[i];
+                    arr[i] = arr[i + 1];
+                    arr[i + 1] = temp;
+                }
+
+            }
+        }
+        console.log(arr);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
