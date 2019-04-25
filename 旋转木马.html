@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/1.css" />
+    <style>
+        /*
+              通过设置width、top、left、z-index、opacity 布局好旋转木马结构
+            */
+
+        .slide .slide1 {
+            width: 400px;
+            top: 20px;
+            left: 50px;
+            opacity: 0.2;
+            z-index: 2;
+        }
+
+        .slide .slide2 {
+            width: 600px;
+            top: 70px;
+            left: 0;
+            opacity: 0.8;
+            z-index: 3;
+        }
+
+        .slide .slide3 {
+            width: 800px;
+            top: 100px;
+            left: 200px;
+            opacity: 1;
+            z-index: 4;
+        }
+
+        .slide .slide4 {
+            width: 600px;
+            top: 70px;
+            left: 600px;
+            opacity: 0.8;
+            z-index: 3;
+        }
+
+        .slide .slide5 {
+            width: 400px;
+            top: 20px;
+            left: 750px;
+            opacity: .2;
+            z-index: 2;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="wrap" id="wrap">
+        <div class="slide" id="slide">
+            <ul>
+                <li class="slide1">
+                    <a href="#">
+                        <img src="img/slidepic1.jpg" alt="" />
+                    </a>
+                </li>
+                <li class="slide2">
+                    <a href="#">
+                        <img src="img/slidepic2.jpg" alt="" />
+                    </a>
+                </li>
+                <li class="slide3">
+                    <a href="#">
+                        <img src="img/slidepic3.jpg" alt="" />
+                    </a>
+                </li>
+                <li class="slide4">
+                    <a href="#">
+                        <img src="img/slidepic4.jpg" alt="" />
+                    </a>
+                </li>
+                <li class="slide5">
+                    <a href="#">
+                        <img src="img/slidepic5.jpg" alt="" />
+                    </a>
+                </li>
+            </ul>
+            <div class="arrow" id="arrow">
+                <a href="javascript:;" class="prev" id="arrLeft">
+   
+                </a>
+                <a href="javascript:;" class="next" id="arrRight">
+     
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- 引入 -->
+    <script src="./jquery-1.12.4.js"></script>
+    <!-- <script>
+        // //   定义一个变量  索引
+        // var index = 0;
+        // // 点击右侧按钮
+        // $('.arrow #arrLeft').click(function () {
+        //   index++;
+        //   console.log(index)
+        //  $('.slide>ul>li').eq(index).toggleClass('slide3').siblings().eq(index+1)
+        //  .toggleClass('slide4').siblings().eq(index+2).toggleClass('slide2')
+        
+        // })
+    //  创建一个数组
+    var arr=['slide1','slide2','slide3','slide4','slide5'];
+     // 点击右侧按钮
+     $('#arrRight').click(function(){
+        //  移除最后一个元素
+        var last=arr.pop();
+        // 在前面添加移除的这个元素
+        arr.unshift(last);
+    //    循环遍历数组
+    for (var  i=0 ; i<arr.length ;i++)  {
+        $('.slide>ul>li').eq(i).removeClass().addClass(arr[i])
+    }
+     })
+    // 点击左侧按钮
+    $('#arrLeft').click(function(){
+    //    把第一移除
+         var first = arr.shift();
+        //  在最后给添加上
+        arr.push(first);
+        // 循环遍历
+        for(var j=0 ;j <arr.length;j++){
+              $('.slide>ul>li').eq(j).removeClass().addClass(arr[j])  
+        }
+     
+    })
+    </script> -->
+
+</body>
+
+</html>
