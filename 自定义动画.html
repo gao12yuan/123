@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            /* height: 200px; */
+            width: 200px;
+            background-color: hotpink;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="btn1">显示</button>
+    <button id="btn2">隐藏</button>
+    <div></div>
+    <script src="./jquery-1.12.4.js"></script>
+    <script>
+        // 点击按钮1
+     $('#btn1').click(function(){
+         $('div').css('display','block')
+         .animate({height:300},1000,'linear')
+     })
+       // 点击按钮2
+    //    $('#btn2').click(function(){
+    //        $('div').animate({height:0},1000,'linear')
+    //    })
+    $('#btn2').click(function(){
+           $('div').animate({height:0},1000,'linear',function(){
+            $('div').css('display','none') 
+           })
+       })
+    </script>
+</body>
+
+</html>
